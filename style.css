@@ -13,15 +13,19 @@ body{
     align-items: center;
 }
 .calculate {
-    background-color: lightsalmon;
+    background-color: rgb(90, 58, 53);
     border-radius: 7px;
-    border: 2px solid rgb(9, 8, 9);
+    border: 7px solid rgb(9, 8, 9);
     flex-direction: column;
+    max-width: 266px;
+    
 }
 
 .display{
+    overflow: hidden;
     width: 100%;
-    height: 100px;
+    max-width: 400px;
+    height: 40px;
     background-color:cornflowerblue;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -30,19 +34,46 @@ body{
     align-items: flex-end;
     padding: 5px;
     font-size: 25px;
+    font-style: rgb(9, 8, 9) ;
+    
 }
 .buttons{
     display: grid;
     grid-template-columns: repeat(4, 60px);
     grid-template-rows: repeat(5, 60px);
-    grid-gap: 0px;
-}
-.buttons .buttonegual{
-    width: 240px;
-    font-size: 30px;
-    background-color:cornflowerblue;
+    grid-gap: 3px;
+    border-radius: 5px;
 }
 
 .button{
-    border-radius: 30px;;
+
+    border-radius: 30px;
+    background-color: rgb(233, 230, 230);
+    box-shadow: 0 1.5px #555;
+    font-weight: bold;
+}
+.button:active {
+    box-shadow: 0 1px #555;
+    transform: translateY(1px);
+}
+
+.button[data-key = "8" ]{
+    background-color: rgb(224, 41, 41);
+}
+.button[data-key = "13"]{
+    background-color: rgb(62, 165, 62);
+    width: 248px;
+    position: relative;
+    top: 6px;
+    height: 46px
+}
+
+.notice p{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+    margin-left: 5px;
+    position: relative;
+    top:4px;
 }
